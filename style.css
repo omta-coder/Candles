@@ -1,0 +1,423 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Sevillana&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+    outline: none;
+    font-family: gilroy;
+    color: #000;
+}
+*::selection{
+    background-color: rgb(78, 5, 5);
+    color: #fff;
+}
+body{
+    text-align: center;
+}
+body h2{
+    font-family: 'Sevillana', cursive; 
+    font-size: 2rem; 
+    margin-bottom: 2rem;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+html{
+    overflow-x: hidden;
+    scroll-padding-top: 6.5rem;
+    scroll-behavior: smooth;
+}
+#nav{
+    padding: .2rem 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 .5rem 1rem #dddd;
+    position: relative;
+    background-color: #fff;
+}
+#nav.active{
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    z-index: 999;
+}
+#nav #menubar{
+    display: none;
+}
+#nav #navbar a{
+    font-family: 'Sevillana', cursive;
+    font-size: 1.5rem;
+    padding: .5rem 1.5rem;
+    border: .13rem solid transparent;
+    border-radius: 50px;
+    transition: all ease .5s;
+}
+#nav #navbar a:hover{
+    border: .13rem solid rgb(49, 6, 6);
+}
+#nav #icons a{
+    padding: .4rem;
+    border: .13rem solid transparent;
+    font-size: 1rem;
+    border-radius: 50%;
+    transition: all ease .5s;
+}
+#nav #icons a:hover{
+    border: .13rem solid rgb(49, 6, 6);
+}
+#home img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#category{
+    padding: 2rem;
+    text-align: center;
+}
+#category h1{
+  font-family: 'Sevillana', cursive; 
+  font-size: 4rem; 
+}
+#category #center{
+    padding: 1rem;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+#category #center::-webkit-scrollbar{
+    display: none;
+}
+#category #center #box{
+    display: inline-block;
+    height: 300px;
+    width: 240px;
+    margin-right: 1rem;
+    background-color: rgb(245 245 245);
+    border-top-left-radius: 6rem;
+    border-top-right-radius: 6rem;
+    overflow: hidden;
+}
+#category #center #box #top{
+    height: 80%;
+    width: 100%;
+}
+#category #center #box #top img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all ease .5s;
+}
+#category #center #box:hover #top img{
+    transform: scale(1.2);
+}
+#category #center #box #bottom{
+    height: 20%;
+    width: 100%;
+}
+#category #center #box #bottom a{
+    font-size: 1.3rem;
+    text-align: center;
+    font-family: 'Sevillana', cursive; 
+}
+#products{
+    padding: 2rem;
+    text-align: center;
+}
+#products h1{
+    font-family: 'Sevillana', cursive; 
+    font-size: 4rem; 
+    margin-bottom: 1rem;
+}
+#products #line{
+    padding: 1rem;
+}
+#products #line a{
+    font-size: 1.2rem;
+    padding: .5rem 2rem;
+    border: .13rem solid rgb(49, 6, 6);
+    font-weight: 600;
+    border-top-left-radius: 1.4rem;
+    border-top-right-radius: 1.4rem;
+    margin-right: .5rem;
+    transition: all ease .65s;
+}
+#products #line a:hover{
+    background-color:rgb(49, 6, 6);
+    color: #fff;
+}
+#products #line a:first-child{
+    background-color:rgb(49, 6, 6);
+    color: #fff;
+}
+#products #center{
+    padding: 1rem;
+    text-align: center;
+}
+#products #center #box{
+    display: inline-block;
+    height: 360px;
+    width: 230px;
+    background-color: rgb(245 245 245);
+    margin-right: .5rem;
+    margin-bottom: 0.5rem;
+    border-top-left-radius: 6rem;
+    border-top-right-radius: 6rem;
+    overflow: hidden;
+}
+#products #center #box #top{
+    height: 70%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+#products #center #box #top #overlay{
+    position: absolute;
+    left: 0;right: 0;bottom: -60%;
+    transition: all ease .5s;
+    z-index: 9999;
+    transition: all ease .7s;
+}
+#products #center #box #top:hover #overlay{
+    bottom: 3%;
+}
+#products #center #box #top #overlay a{
+    font-size: 1rem;
+    padding: .6rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background-color: #fff;
+    border: .1rem solid rgb(49, 6, 6);
+    box-shadow: 0 .5rem 1rem #dddd;
+    transition: all ease .5s;
+}
+#products #center #box #top #overlay a:hover{
+    background-color:rgb(49, 6, 6);
+    color: #fff;
+}
+#products #center #box #top img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all ease .5s;
+}
+#products #center #box #top:hover img{
+    transform: scale(1.1);
+}
+#products #center #bottom{
+    height: 30%;
+    width: 100%;
+}
+#products #center #bottom #stars i{
+    font-size: 1.4rem;
+    color: orange;
+}
+#products #center #bottom p{
+    font-family: 'Sevillana', cursive; 
+    font-size: 1.6rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.3rem;
+    transition: all ease .5s;
+}
+#products #center #bottom p:hover{
+    color:rgb(49, 6, 6)
+}
+#products #center #bottom a{
+    font-size: 1.1rem;
+}
+#products #center #bottom a span{
+    text-decoration: line-through;
+}
+#sale{
+    padding: 2rem;
+    text-align: center;
+}
+#sale #box{
+    height: 60vh;
+    /* width: 520px; */
+    display: inline-block;
+    background-color: red;
+    margin-right: 0.7rem;
+    overflow: hidden;
+    position: relative;
+}
+#sale #box #over{
+    position: absolute;
+    margin: 2rem;
+}
+#sale #box #over h1{
+    font-family: 'Sevillana', cursive; 
+    color: #fff;
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+}
+#sale #box #over button{
+    padding: .5rem 2rem;
+    background-color: rgb(49, 6, 6);
+    font-weight: 600;
+    border-top-left-radius: 1.4rem;
+    border-top-right-radius: 1.4rem;
+    margin-right: .5rem;
+    transition: all ease .65s;
+    color: #fff;
+}
+#sale #box #over button:hover{
+    background-color: #000;
+}
+#sale #box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#sale #box:first-child{
+    border-bottom-left-radius: 6rem;
+    border-bottom-right-radius: 6rem;
+}
+#sale #box:last-child{
+    border-top-left-radius: 6rem;
+    border-top-right-radius: 6rem;
+}
+#sale #box:last-child #over{
+    right: 0;
+    top: 5%;
+}
+#sale #box:last-child #over a{
+    font-size: 1.2rem;
+    border: .1rem solid rgb(49, 6, 6);
+    padding: .6rem 1rem;
+    border-radius: 1rem;
+}
+#sale #box:last-child #over h1{
+    margin-top: 3rem;
+}
+#blog{
+    padding: 2rem 0;
+    text-align: center;
+}
+#blog h1{
+    font-family: 'Sevillana', cursive; 
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+#blog #center{
+    padding: 1rem;
+}
+#blog #center #box{
+    /* width: 30vw; */
+    height: 40vh;
+    display: inline-block;
+    border-top-left-radius: 6rem;
+    border-top-right-radius: 6rem;
+    overflow: hidden;
+    margin-right: 0.4rem;
+    overflow: hidden;
+}
+#blog #center #box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all ease .5s;
+}
+#blog #center #box:hover img{
+    transform: scale(1.2);
+}
+#contact{
+    padding: 2rem;
+    text-align: center;
+}
+#contact h1{
+    font-family: 'Sevillana', cursive; 
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+#contact form{
+    margin: 2rem;
+    text-align: center;
+    padding: 1rem;
+    border: .1rem solid #dddddd;
+}
+#contact form #inputBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#contact form #inputBox input{
+    border: .1rem solid #dddd;
+    width: 49%;
+    margin: auto;
+    font-size: 1.2rem;
+    padding: .5rem 1rem;
+    margin-bottom: 1rem;
+    font-family: 'Sevillana', cursive; 
+}
+#contact form  textarea{
+    font-family: 'Sevillana', cursive; 
+    border: .1rem solid #dddd;
+    width: 99%;
+    font-size: 1.2rem;
+    padding: .5rem 1rem;
+    margin-bottom: 1rem;
+}
+#contact form #btn{
+    font-family: 'Sevillana', cursive; 
+    padding: 1rem 2rem;
+    background-color: rgb(49, 6, 6);
+    font-weight: 600;
+    font-size: 1.3rem;
+    border-top-left-radius: 1.4rem;
+    border-top-right-radius: 1.4rem;
+    margin-right: .5rem;
+    transition: all ease .5s;
+    color: #fff;
+}
+#contact form #btn:hover{
+    background-color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:600px) {
+    #nav{
+        padding: 1rem 3rem;
+    }
+    #nav #menubar{
+        display: initial;
+        font-size: 3rem;
+    }
+    #nav #navbar{
+        position: absolute;
+         top: 100%;
+         left: 0;
+         right: 0;
+         padding: 1rem ;
+         background-color: #234567;
+         display: none;
+         z-index: 9999;
+    }
+    #nav #navbar.active{
+        display: initial;
+    }
+    #nav #navbar a{
+        font-size: 2.5rem;
+        display: block;
+        text-align: center;
+        background: #fff;
+        color: #000;
+        padding: 1rem;
+        margin: 1.5rem 0;
+    }
+    #nav #icons a{
+        font-size: 2rem;
+    }
+}
